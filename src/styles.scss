@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import 'variables';
+
+html, body, div, input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: $secondary-color;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 50%;
+}
+
+.width-33 {
+    width: 33.33%;
+}
+
+.mx-auto {
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
+
+.my-auto {
+    margin-top: auto!important;
+    margin-bottom: auto!important;
+}
+
+.px-auto {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.py-auto {
+    padding-top: 0;
+    padding-bottom: 0;
+}
