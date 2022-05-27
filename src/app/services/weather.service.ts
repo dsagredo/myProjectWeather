@@ -11,20 +11,15 @@ export class WeatherService {
   constructor(readonly http: HttpClient) {}
 
   getWeatherByName(city: string): Observable<WeatherData> {
-    const params = new HttpParams()
-      .set('q', city)
-      .set('units', 'metric')
-      .set('appid', environment.openWeather.key);
+    const params = new HttpParams().set('q', city).set('units', 'metric');
     return this.http.get<WeatherData>(`${this.API_URL}/weather`, {
       params,
     });
   }
-
   getWeatherByCoords(coord: Coord): Observable<WeatherData> {
     const params = new HttpParams()
-      .set('lat', coord.lat)
-      .set('lon', coord.lon)
-      .set('appid', environment.openWeather.key);
+      .set('lat', coord.latitude)
+      .set('lon', coord.longitude);
     return this.http.get<WeatherData>(`${this.API_URL}/weather`, {
       params,
     });
